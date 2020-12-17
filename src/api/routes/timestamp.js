@@ -35,7 +35,6 @@ const timestamp = (req,res) => {
     }
     
       //empty string scenario WORKS
-      console.log("Empty string test. Geat success.");
       var date = new Date();
       var currentTime = date.getTime();
       var currentUTC = date.toUTCString();

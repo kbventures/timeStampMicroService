@@ -12,6 +12,6 @@ app.get("/", function (req, res) {
 
 // app.use('/api/testing', timestamp);
 
-app.get("/api/timestamp/:date_string?", timestamp);
+app.get("/api/timestamp/:date?", timestamp);
 
 module.exports = app; 
