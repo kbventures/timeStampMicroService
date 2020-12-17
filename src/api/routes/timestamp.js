@@ -1,12 +1,12 @@
 const timestamp = (req,res) => {
-    var timeParam = req.params.date_string;
-  
+    
+      var timeParam = req.params.date;
+      // console.log(`Test 0: ${req.params.date}`);
     //Testing if NOT EMPTY  
     if (timeParam) {
-  
       var date = new Date(timeParam);
-      var testParam = date.toString();
-      console.log(testParam);
+      var testParam = date;
+      console.log(`Test 1 ${testParam}`);
       
       //If Invalid date. It could mean it's in milliseconds.
       if(testParam == "Invalid Date"){
@@ -35,6 +35,7 @@ const timestamp = (req,res) => {
     }
     
       //empty string scenario WORKS
+      // console.log('Empty String');
       var date = new Date();
       var currentTime = date.getTime();
       var currentUTC = date.toUTCString();
