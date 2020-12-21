@@ -1,4 +1,4 @@
-const timestamp = (req,res) => {
+const timestamp  = (req,res) => {
     
       var timeParam = req.params.date;
       // console.log(`Test 0: ${req.params.date}`);

@@ -1,0 +1,17 @@
+Need to add error status code
+
+Update Documentation
+
+Refactor timeStamp Module
+
+Refactor so the code is asynchronous
+
+Check that testing asynchronously is still functional
+
+Get Feedback // ask questions
+
+Deploy on heroku
+
+///////
+
+Optional: React Front End
