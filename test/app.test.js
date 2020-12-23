@@ -9,9 +9,6 @@ chai.should();
 const currentDate = new Date('5 December 2020')
 
 
-
-
-
 describe('/', () => {
     it('/ it should return 200', (done) => {
         chai.request(server)

@@ -1,8 +1,9 @@
-const timestamp  = (req,res) => {
+const timestamp = async (req,res,next) => {
+  
+    try{
+  
     
       var timeParam = req.params.date;
-      // console.log(`Test 0: ${req.params.date}`);
-    //Testing if NOT EMPTY  
     if (timeParam) {
       var date = new Date(timeParam);
       var testParam = date;
@@ -40,6 +41,10 @@ const timestamp  = (req,res) => {
       var currentTime = date.getTime();
       var currentUTC = date.toUTCString();
       res.json({unix : currentTime, utc : currentUTC });
+
+    } catch (error) {
+      return next(error);
+    }
   }
 
 module.exports = timestamp;
