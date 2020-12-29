@@ -40,7 +40,7 @@ describe('/api/timestamp/2020-12-05', () =>{
             .get('/api/timestamp/2020-12-05')
             .end((err, res) => {
                 res.body.should.have.property('utc');
-                res.body.utc.should.be.equal('Fri, 25 Dec 2015 00:00:00 GMT');
+                res.body.utc.should.be.equal('Sat, 05 Dec 2020 00:00:00 GMT');
                 done();
             });
     })
@@ -114,7 +114,7 @@ describe('/api/timestamp/1451001600000', () =>{
             .get('/api/timestamp/1451001600000')
             .end((err, res) => {
                 res.body.should.have.property('unix');
-                res.body.unix.should.be.equal(1607126400000);
+                res.body.unix.should.be.equal(1451001600000);
                 done();
             });
     })
