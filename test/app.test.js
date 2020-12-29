@@ -22,7 +22,7 @@ describe('/', () => {
 
 
 describe('/api/timestamp/abc', () => {
-    it('An error paramter should return property error and  value of Invalid Date', (done) => {
+    it('An error parameter should return property error and  value of Invalid Date', (done) => {
         chai.request(server)
             .get('/api/timestamp/abc')
             .end((err, res) =>{
@@ -63,7 +63,7 @@ describe('/api/timestamp/2020-12-05', () =>{
 
 
 describe('/api/timestamp/', () =>{
-    it('/api/timestamp should have a unix and utc property', (done) => {
+    it('/api/timestamp response should have a unix and utc property', (done) => {
         chai.request(server)
             .get('/api/timestamp/')
             .end((err, res) => {
@@ -74,6 +74,22 @@ describe('/api/timestamp/', () =>{
     })
 
 });
+
+
+
+// Isn't woring yet
+// describe('/api/timestamp/', () =>{
+//     it('/api/timestamp req body param should be undefined', (done) => {
+//         chai.request(server)
+//             .get('/api/timestamp/')
+//             .end((err, res) => {
+//                 res.body.should.have('unix');
+//                 res.body.should.have.property('utc');
+//                 done();
+//             });
+//     })
+
+// });
 
 
 describe('/api/timestamp/', () =>{
