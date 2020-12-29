@@ -4,7 +4,7 @@ const timestamp = async (req,res,next) => {
   
     
       var timeParam = req.params.date;
-    if (timeParam) {
+      if (timeParam) {
       var date = new Date(timeParam);
       var testParam = date;
       console.log(`Test 1 ${testParam}`);
@@ -22,7 +22,7 @@ const timestamp = async (req,res,next) => {
             var parseIntDate = parseInt(timeParam);
             let tbd = new Date(parseIntDate).toUTCString() 
          
-            return res.json({unix : parseIntDate, utc : tbd });
+            return res.json({uni1 : parseIntDate, ut1 : tbd });
           }
         return res.json({error : "Invalid Date" });
       }
@@ -32,7 +32,7 @@ const timestamp = async (req,res,next) => {
       // NOT Invalid Date
       var currentTime = date.getTime();
       var currentUTC = date.toUTCString();
-      return res.json({unix : currentTime, utc : currentUTC });
+      return res.json({uni1 : currentTime, ut1 : currentUTC });
     }
     
       //empty string scenario WORKS
@@ -40,7 +40,7 @@ const timestamp = async (req,res,next) => {
       var date = new Date();
       var currentTime = date.getTime();
       var currentUTC = date.toUTCString();
-      res.json({unix : currentTime, utc : currentUTC });
+      res.json({uni1 : currentTime, ut1 : currentUTC });
 
     } catch (error) {
       return next(error);
